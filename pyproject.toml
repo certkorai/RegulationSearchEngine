@@ -1,0 +1,24 @@
+[project]
+name = "angentic_base"
+version = "0.1.0"
+description = "Angentic_Base using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.98.0,<1.0.0",
+     "PyPDF2>=3.0.0"
+]
+
+[project.scripts]
+angentic_base = "angentic_base.main:run"
+run_crew = "angentic_base.main:run"
+train = "angentic_base.main:train"
+replay = "angentic_base.main:replay"
+test = "angentic_base.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
